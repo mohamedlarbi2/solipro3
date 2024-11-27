@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Navigation</title>
+    <link rel="stylesheet" href="nav.css">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <div class="c">
+            <div class="a">Logo</div>
+            <div class="b" onclick="toggleMenu()"><i class="fas fa-bars"></i></div>
+        </div>
+        <nav>
+            <ul class="u">
+                <li class="drop">
+                    <a href="#a1"><i class="fas fa-home"></i> Home</a>
+                    <div class="dropdown">
+                        <a href="#f"><span onclick="PDF()">Home Page</span></a>
+                        <span>More Info</span>
+                    </div>
+                </li>
+                <li class="drop">
+                    <a href="#a2"><i class="fas fa-info-circle"></i> About</a>
+                    <div class="dropdown">
+                        <span>Our Story</span>
+                        <span>Our Team</span>
+                    </div>
+                </li>
+                <li class="drop">
+                    <a href="#a3"><i class="fas fa-cogs"></i> Services</a>
+                    <div class="dropdown">
+                        <span>Web Design</span>
+                        <span>SEO Services</span>
+                    </div>
+                </li>
+                <li class="drop">
+                    <a href="#a4"><i class="fas fa-phone"></i> Contact</a>
+                    <div class="dropdown">
+                        <span>Contact Form</span>
+                        <span>Call Us</span>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="a1" style="background-color: #8A2BE2;">
+        <h2>Welcome to Home</h2>
+        <p>Explore our services and more.</p>
+    </section>
+    <section id="a2" style="background-color: #100618;">
+        <h2>About Us</h2>
+        <p>Learn more about our mission and values.</p>
+    </section>
+    <section id="a3" style="background-color: #D8C9E7;">
+        <h2>Our Services</h2>
+        <p>Check out what we offer to our clients.</p>
+    </section>
+    <section id="a4" style="background-color: #F44336;">
+        <h2>Contact Us</h2>
+        <p>Get in touch with us for any inquiries.</p>
+    </section>
+    <section>
+        <iframe src="mohamed larbi boulaich azifi.pdf" frameborder="0" id="f"></iframe>
+    </section>
+
+    <script>
+        function toggleMenu() {
+            const nav = document.querySelector('nav');
+            nav.classList.toggle('show');
+        }
+        function PDF() {
+            const frame = document.querySelector('iframe');
+            frame.style.display = frame.style.display === 'none' || frame.style.display === '' ? 'flex' : 'none';
+        }
+
+
+    </script>
+</body>
+</html>
